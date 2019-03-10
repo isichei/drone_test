@@ -1,5 +1,6 @@
+---
 kind: pipeline
-name: default
+name: test
 
 steps:
 - name: test
@@ -7,3 +8,25 @@ steps:
   commands:
   - echo "Hi - let's do a test"
   - python -m unittest tests.test -v
+
+trigger:
+  branch:
+    include:
+    - master
+    - dev
+  event:
+    - pull_request
+
+---
+kind: pipeline
+
+steps:
+  - name: tag
+    image: python
+    commands:
+    - echo "Tag acknowledged"
+  
+trigger:
+  event:
+    - tag
+
