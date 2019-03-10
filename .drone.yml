@@ -19,6 +19,7 @@ trigger:
 
 ---
 kind: pipeline
+name: tag-test
 
 steps:
   - name: tag
