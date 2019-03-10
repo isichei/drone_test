@@ -1,6 +1,6 @@
 
 import unittest
-from drone_test import hello
+from drone_test import hello, hi
 
 class SomeTest(unittest.TestCase):
     """
