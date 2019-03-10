@@ -1,6 +1,6 @@
 
 import unittest
-from drone_test import hello
+from drone_test import hello, hi
 
 class SomeTest(unittest.TestCase):
     """
@@ -8,6 +8,7 @@ class SomeTest(unittest.TestCase):
     """
     def test_test(self):
         self.assertEqual(hello(), "hello world")
+        self.assertEqual(hi(), "hi")
 
 if __name__ == "__main__":
     unittest.main()
